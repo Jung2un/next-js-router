@@ -1,0 +1,9 @@
+.container {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container h3 {
+    margin-bottom: 0;
+}
