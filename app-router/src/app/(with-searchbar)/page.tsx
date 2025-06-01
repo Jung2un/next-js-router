@@ -1,9 +1,9 @@
+import {Metadata} from "next";
+import {Suspense} from "react";
 import {BookData} from "@/types";
+import {delay} from "@/util/delay";
 import style from "./page.module.css";
 import BookItem from "@/components/book-item";
-import {delay} from "@/util/delay";
-import {Suspense} from "react";
-import BookItemSkeleton from "@/components/skeleton/book-item-skeleton";
 import BookListSkeleton from "@/components/skeleton/book-list-skeleton";
 
 async function AllBooks() {
@@ -47,6 +47,16 @@ async function RandomBooks() {
 }
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "도서 목록",
+  description: "등록된 도서를 조회해보세요",
+  openGraph: {
+    title: "도서 목록",
+    description: "등록된 도서를 조회해보세요",
+    images: ['/thumbnail.png'],
+  }
+}
 
 export default function Home() {
   return (

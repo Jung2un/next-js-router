@@ -2,6 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 import {BookData} from "@/types";
 import style from "./layout.module.css";
+import {ReactNode} from "react";
 
 async function Footer() {
   const res = await fetch(
@@ -24,8 +25,10 @@ async function Footer() {
 
 export default function RootLayout({
                                      children,
+                                     modal
                                    }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
+  modal: ReactNode;
 }>) {
   return (
     <html lang="ko">
@@ -37,6 +40,8 @@ export default function RootLayout({
       <main>{children}</main>
       <Footer/>
     </div>
+    {modal}
+    <div id="modal-root"></div>
     </body>
     </html>
   );
