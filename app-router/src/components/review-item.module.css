@@ -1,0 +1,27 @@
+.container {
+    gap: 5px;
+    display: flex;
+    padding: 15px 0;
+    flex-direction: column;
+}
+
+.author {
+    font-size: 14px;
+}
+
+.content {
+    padding: 15px 10px;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+}
+
+.bottom_container {
+    gap: 10px;
+    color: gray;
+    display: flex;
+    font-size: 14px;
+}
+
+.delete_btn {
+    cursor: pointer;
+}

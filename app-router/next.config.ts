@@ -5,8 +5,12 @@ const nextConfig: NextConfig = {
     fetches: {
       fullUrl: true,
     }
+  },
+  images: {
+    domains: [
+      'shopping-phinf.pstatic.net'
+    ]
   }
-  /* config options here */
 };
 
 export default nextConfig;
